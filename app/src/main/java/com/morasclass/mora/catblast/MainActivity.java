@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
 
         int c = index;
        do {
-            index = new Random().nextInt(37) + 1;
+            index = new Random().nextInt(36) + 1;
         } while (index == c);
 
 
         Toast.makeText(MainActivity.this, "sweet cat!", Toast.LENGTH_SHORT).show();
-        //Log.i("Info", "The button was clicked!");
+        Log.i("Info", "cat #"+(index+1));
 
         ImageView image = (ImageView) findViewById(R.id.theStage);
 
