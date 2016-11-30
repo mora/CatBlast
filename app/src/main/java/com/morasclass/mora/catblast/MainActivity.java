@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
 
-    public void newCat(View view) {
+    public void nextCat(View view) {
         int[] pics = {
                 R.drawable.cat1,
                 R.drawable.cat2,
@@ -69,8 +69,24 @@ public class MainActivity extends AppCompatActivity {
             index = new Random().nextInt(36) + 1;
         } while (index == c);
 
-
+        if(new java.util.Random().nextInt(10)>6)
         Toast.makeText(MainActivity.this, "sweet cat!", Toast.LENGTH_SHORT).show();
+        else if(new java.util.Random().nextInt(10)>6){
+            Toast.makeText(MainActivity.this, "sweet cat!", Toast.LENGTH_SHORT).show();
+        }
+        else if(new java.util.Random().nextInt(10)>6){
+            Toast.makeText(MainActivity.this, "pretty kitty!", Toast.LENGTH_SHORT).show();
+        }
+        else if(new java.util.Random().nextInt(10)>6){
+            Toast.makeText(MainActivity.this, "I love cats!", Toast.LENGTH_SHORT).show();
+        }
+        else if(new java.util.Random().nextInt(10)>6){
+            Toast.makeText(MainActivity.this, "kitty cat!", Toast.LENGTH_SHORT).show();
+        }
+        else if(new java.util.Random().nextInt(10)>6){
+            Toast.makeText(MainActivity.this, "furry baby!", Toast.LENGTH_SHORT).show();
+        }
+
         Log.i("Info", "cat #"+(index+1));
 
         ImageView image = (ImageView) findViewById(R.id.theStage);
@@ -80,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
         image.setImageResource(pics[index]);
 
     }
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
