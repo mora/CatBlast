@@ -1,5 +1,6 @@
 package com.morasclass.mora.catblast;
 // thecatapi.com MTM4ODQ4
+import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,8 +13,12 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity {
     private int index;
@@ -97,7 +102,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void newCat(View view){
+        Image image = null;
+        try{
+            URL url = new URL("http://thecatapi.com/?id=c25");
+            Picasso.with(this).load(url.getFile()).into((ImageView)findViewById(R.id.theStage));
+            Toast.makeText(MainActivity.this, "cat upgrade complete!", Toast.LENGTH_SHORT).show();
+        }
+        catch(IOException e){
+            Toast.makeText(MainActivity.this, "IOException caught", Toast.LENGTH_SHORT).show();
 
+        }
+
+    }
 
 
     @Override

@@ -27,8 +27,23 @@
         android:text="CHANGE PICTURE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:onClick="nextCat"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:text="NEW PICTURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/theButton"
-        android:onClick="nextCat" />
+        android:onClick="newCat"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp" />
 </RelativeLayout>
